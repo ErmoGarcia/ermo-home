@@ -1,0 +1,26 @@
+[
+    {
+        "name": "traefik",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Traefik.logo.png/1200px-Traefik.logo.png",
+        "description": "Traefik is an open-source Edge Router that makes publishing your services a fun and easy experience.",
+        "url": "traefik.ermo.space"
+    },
+    {
+        "name": "walabag",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Logo-wallabag-svg.svg/1200px-Logo-wallabag-svg.svg.png",
+        "description": "Wallabag allows you to not miss any content anymore. Click, save and read it when you can. It extracts content so that you can read it when you have time.",
+        "url": "wallabag.ermo.space"
+    },
+    {
+        "name": "nextcloud",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/1024px-Nextcloud_Logo.svg.png",
+        "description": "Nextcloud is a suite of client-server software for creating and using file hosting services.",
+        "url": "nextcloud.ermo.space"
+    },
+    {
+        "name": "codimd",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png",
+        "description": "CodiMD lets you collaborate in real-time with markdown.",
+        "url": "codimd.ermo.space"
+    }
+]
