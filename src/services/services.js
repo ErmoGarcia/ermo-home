@@ -35,12 +35,14 @@ function Services() {
             function ServiceItem(props) {
                     return (
                         <a href={"https://"+props.url}>
-                            <div className="service-logo">
-                                <img alt={props.name} src={props.logo}/>
-                            </div>
-                            <div className="service-content">
-                                <h2>{props.name}</h2>
-                                <p>{props.description}</p>
+                            <div className="service-item">
+                                <div className="service-logo">
+                                    <img alt={props.name} src={props.logo}/>
+                                </div>
+                                <div className="service-content">
+                                    <h2>{props.name}</h2>
+                                    <p>{props.description}</p>
+                                </div>
                             </div>
                         </a>
     )

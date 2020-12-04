@@ -1,17 +1,20 @@
 @import 'services/services';
 
 .App {
-  text-align: center;
+    h1{font-size: 5rem;}
+    text-align: center;
 }
 
 .App-header {
     padding: 20px;
-    background-color: #282c34;
+    // background-color: #282c34;
     min-height: 100vh;
     // font-size: calc(10px + 2vmin);
+    background: rgb(106,113,121);
+    background: linear-gradient(132deg, rgba(106,113,121,1) 20%, rgba(52,65,92,1) 47%, rgba(11,17,45,1) 77%);
     color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }

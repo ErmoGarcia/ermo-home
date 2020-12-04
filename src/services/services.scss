@@ -3,11 +3,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
-    img{
-        max-height: 8rem;
-        max-width: 100%;
-    }
-
     a{
         color: white;
         text-decoration: none;
@@ -15,20 +10,50 @@
 
     .service-item{
         margin: 1.2rem;
-        padding: 1.5rem;
 
-        width: 12rem;
-        height: 20rem;
+        width: 16rem;
+        height: 16rem;
 
-        border: 2px solid white;
-        border-radius: 25px;
+        position: relative;
 
-        h2{
-            text-transform: capitalize;
+        overflow: hidden;
+
+        .service-logo{
+            position: absolute;
+            top: 0;
+            padding: 2rem;
+
+            // background-color:  #e4dceb;
+            // border-radius: 50%;
+
+            img{
+                width: 12rem;
+                height: 12rem;
+                object-fit: contain;
+            }
+        }
+
+        .service-content{
+            position: absolute;
+            top: -16rem;
+            padding: 1rem;
+
+            width: 14rem;
+            height: 14rem;
+
+            background-color: black;
+            opacity: 0.8;
+
+            transition: .5s;
+
+            h2{
+                text-transform: capitalize;
+            }
         }
     }
 
-    .service-item:hover {
-        transform: scale(1.2);
+    .service-item:hover .service-content {
+        top: 0;
     }
+
 }
