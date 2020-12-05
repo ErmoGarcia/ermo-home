@@ -1,15 +1,24 @@
-FROM node:alpine
+FROM node:10-alpine as builder
 
-WORKDIR /app
+COPY package.json package-lock.json ./
 
-COPY package.json /app
+RUN npm install && mkdir /react-ui && mv ./node-modules ./react-ui
 
-RUN apk add --no-cache --virtual .build-deps make gcc g++ python \
-&& yarn global add serve \
-&& npm install --production \
-&& apk del .build-deps
+WORKDIR /react-ui
 
-COPY . /app
+COPY . .
 
-CMD ["npm", "run", "build"]
-CMD ["serve", "-s", "build"]
+RUN npm run build
+
+
+FROM nginx:alpine
+
+COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=builder /react-ui/build /usr/share/nginx/html
+
+EXPOSE 3006 80
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
