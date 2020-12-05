@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY package.json /app
 
-RUN npm install && npm cache clean
+RUN apk add --no-cache --virtual .build-deps make gcc g++ python \
+&& npm install --production --silent \
+&& apk del .build-deps
 
 COPY . /app
 
