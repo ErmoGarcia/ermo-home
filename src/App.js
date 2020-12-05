@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
         <header className="App-header">
-            <h1>Self-hosted services</h1>
+            <h1>Services hosted by Ermo</h1>
             <Services />
         </header>
     </div>
