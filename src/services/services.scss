@@ -52,7 +52,8 @@
         }
     }
 
-    .service-item:hover .service-content {
+    .service-item:hover .service-content,
+    .service-item:active .service-content {
         top: 0;
     }
 
