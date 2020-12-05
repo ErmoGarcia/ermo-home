@@ -5,9 +5,9 @@ WORKDIR /app
 COPY package.json /app
 
 RUN apk add --no-cache --virtual .build-deps make gcc g++ python \
-&& npm install --production --silent \
-&& apk del .build-deps \
-yarn global add serve
+&& yarn global add serve \
+&& npm install --production \
+&& apk del .build-deps
 
 COPY . /app
 
