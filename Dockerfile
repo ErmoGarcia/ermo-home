@@ -11,5 +11,4 @@ RUN apk add --no-cache --virtual .build-deps make gcc g++ python \
 COPY . /app
 
 CMD ["npm", "run", "build"]
-CMD ["npm", "install", "-g", "serve"]
 CMD ["serve", "-s", "build"]
