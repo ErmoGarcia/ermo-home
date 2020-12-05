@@ -6,7 +6,8 @@ COPY package.json /app
 
 RUN apk add --no-cache --virtual .build-deps make gcc g++ python \
 && npm install --production --silent \
-&& apk del .build-deps
+&& apk del .build-deps \
+yarn global add serve
 
 COPY . /app
 
